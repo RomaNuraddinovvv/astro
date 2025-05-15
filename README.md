@@ -160,4 +160,4 @@ Common issues and solutions:
 - Maintain clean code structure
 
 This README provides comprehensive information for developers, contributors, and users to understand and work with the AstroQuest platform effectively.
-# astro
+
