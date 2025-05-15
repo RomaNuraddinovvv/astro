@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroQuest - Space Quizzes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AstroQuest<span class="dot">.</span></h1>
+            <p class="subtitle">Explore space through exciting quizzes</p>
+        </header>
+        
+        <div class="nasa-image-container">
+            <img src="" alt="NASA Astronomy Picture of the Day" class="nasa-image">
+            <div class="image-overlay">
+                <div class="image-title">Loading image...</div>
+            </div>
+        </div>
+        
+        <div class="categories">
+            <div class="category" data-category="planets">
+                <h3>Planets</h3>
+                <p>Test your knowledge about the Solar System planets</p>
+            </div>
+            <div class="category" data-category="stars">
+                <h3>Stars</h3>
+                <p>Learn more about stars and constellations</p>
+            </div>
+            <div class="category" data-category="space">
+                <h3>Space</h3>
+                <p>Questions about space missions and discoveries</p>
+            </div>
+            <div class="category" data-category="galaxies">
+                <h3>Galaxies</h3>
+                <p>Explore distant galaxies and their mysteries</p>
+            </div>
+            <div class="category" data-category="blackholes">
+                <h3>Black Holes</h3>
+                <p>Dive into the mysteries of black holes and gravity</p>
+            </div>
+            <div class="category" data-category="astronomy">
+                <h3>Astronomy</h3>
+                <p>General questions about astronomy and space exploration</p>
+            </div>
+        </div>
+        
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <h2 class="quiz-title">Quiz Category</h2>
+                <button class="back-btn">← Back to Categories</button>
+            </div>
+            <div class="question"></div>
+            <div class="options"></div>
+            <div class="explanation"></div>
+            <button class="next-btn">Next Question</button>
+        </div>
+        
+        <div class="result-container">
+            <h2>Quiz Results</h2>
+            <p class="result-score">0/0</p>
+            <p class="result-message"></p>
+            <button class="retry-btn">Try Again</button>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>

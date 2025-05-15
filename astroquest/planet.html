@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AstroQuest - Interactive Space Learning</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="planet.css">
+  <link rel="stylesheet" href="star.css">
+  <link rel="stylesheet" href="quiz.css">
+  <link rel="stylesheet" href="resources.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Background Video -->
+  <video class="background-video" autoplay muted loop>
+    <source src="https://videos.pexels.com/video-files/5818973/5818973-uhd_2560_1440_24fps.mp4" type="video/mp4">
+  </video>
+
+  <!-- Profile Avatar -->
+  <a href="profile.html" class="profile-avatar">
+    <img src="avatar.png" alt="Profile Avatar">
+  </a>
+
+  <div id="app" data-current-planet="mercury">
+    <!-- Sections Container -->
+    <div class="sections-container">
+      <!-- Planets Section -->
+      <div class="section" id="planets-section" data-active>
+        <nav class="planet-nav">
+          <ul>
+            <li data-planet="mercury" class="active">Mercury</li>
+            <li data-planet="venus">Venus</li>
+            <li data-planet="earth">Earth</li>
+            <li data-planet="mars">Mars</li>
+            <li data-planet="jupiter">Jupiter</li>
+            <li data-planet="saturn">Saturn</li>
+            <li data-planet="uranus">Uranus</li>
+            <li data-planet="neptune">Neptune</li>
+          </ul>
+        </nav>
+
+        <!-- Mercury -->
+        <div class="planet" data-planet="mercury" data-active>
+          <div class="planet-title">
+            <h1>Mercury</h1>
+            <p class="planet-description">The smallest and innermost planet, Mercury experiences extreme temperature variations from -180°C to 430°C. Its surface is heavily cratered, resembling our Moon, and it completes an orbit around the Sun in just 88 Earth days.</p>
+          </div>
+          <div class="planet-details">
+            <div class="detail" data-detail="tilt" data-postfix="km">4879</div>
+            <div class="detail" data-detail="gravity" data-postfix="𝗑">0.9</div>
+            <div class="detail" data-detail="speed" data-postfix="km/s">47.4</div>
+          </div>
+          <figure class="planet-figure">
+            <img src="mercury.svg" alt="Mercury" />
+          </figure>
+        </div>
+
+        <!-- Venus -->
+        <div class="planet" data-planet="venus">
+          <div class="planet-title">
+            <h1>Venus</h1>
+            <p class="planet-description">Earth's 'sister planet' with a toxic atmosphere of carbon dioxide and sulfuric acid clouds. Surface temperatures reach 462°C, hot enough to melt lead. Venus rotates backwards compared to most planets, with a day longer than its year.</p>
+          </div>
+          <div class="planet-details">
+            <div class="detail" data-detail="tilt" data-postfix="km">12104</div>
+            <div class="detail" data-detail="gravity" data-postfix="𝗑">0.2</div>
+            <div class="detail" data-detail="speed" data-postfix="km/s">35.0</div>
+          </div>
+          <figure class="planet-figure">
+            <img src="venus.svg" alt="Venus" />
+          </figure>
+        </div>
+
+        <!-- Earth -->
+        <div class="planet" data-planet="earth">
+          <div class="planet-title">
+            <h1>Earth</h1>
+            <p class="planet-description">Our unique home planet, the only known world with liquid water on its surface and life. Earth's atmosphere contains 21% oxygen, and its magnetic field protects us from harmful solar radiation. The planet is 71% covered in water.</p>
+          </div>
+          <div class="planet-details">
+            <div class="detail" data-detail="tilt" data-postfix="km">12742</div>
+            <div class="detail" data-detail="gravity" data-postfix="𝗑">7.3</div>
+            <div class="detail" data-detail="speed" data-postfix="km/s">29.8</div>
+          </div>
+          <figure class="planet-figure">
+            <img src="earth.svg" alt="Earth" />
+          </figure>
+        </div>
+
+        <!-- Mars -->
+        <div class="planet" data-planet="mars">
+          <div class="planet-title">
+            <h1>Mars</h1>
+            <p class="planet-description">The Red Planet, named for its iron oxide-rich soil. Home to the solar system's largest volcano (Olympus Mons) and deepest canyon (Valles Marineris). Mars has two small moons, Phobos and Deimos, and evidence suggests it once had liquid water.</p>
+          </div>
+          <div class="planet-details">
+            <div class="detail" data-detail="tilt" data-postfix="km">6779</div>
+            <div class="detail" data-detail="gravity" data-postfix="𝗑">1.1</div>
+            <div class="detail" data-detail="speed" data-postfix="km/s">24.1</div>
+          </div>
+          <figure class="planet-figure">
+            <img src="mars.svg" alt="Mars" />
+          </figure>
+        </div>
+
+        <!-- Jupiter -->
+        <div class="planet" data-planet="jupiter">
+          <div class="planet-title">
+            <h1>Jupiter</h1>
+            <p class="planet-description">The solar system's largest planet, a gas giant with a Great Red Spot storm that has raged for over 400 years. Jupiter's strong magnetic field and 79 known moons make it a mini solar system. Its rapid rotation creates distinctive cloud bands.</p>
+          </div>
+          <div class="planet-details">
+            <div class="detail" data-detail="tilt" data-postfix="km">139820</div>
+            <div class="detail" data-detail="gravity" data-postfix="𝗑">1.8</div>
+            <div class="detail" data-detail="speed" data-postfix="km/s">13.1</div>
+          </div>
+          <figure class="planet-figure">
+            <img src="jupiter.svg" alt="Jupiter" />
+          </figure>
+        </div>
+
+        <!-- Saturn -->
+        <div class="planet" data-planet="saturn">
+          <div class="planet-title">
+            <h1>Saturn</h1>
+            <p class="planet-description">Famous for its spectacular ring system made of ice particles and rock. The least dense planet in our solar system - it would float in water! Saturn has 82 confirmed moons, including Titan, the only moon with a substantial atmosphere.</p>
+          </div>
+          <div class="planet-details">
+            <div class="detail" data-detail="tilt" data-postfix="km">116460</div>
+            <div class="detail" data-detail="gravity" data-postfix="𝗑">7.3</div>
+            <div class="detail" data-detail="speed" data-postfix="km/s">9.7</div>
+          </div>
+          <figure class="planet-figure">
+            <img src="saturn.svg" alt="Saturn" />
+          </figure>
+        </div>
+
+        <!-- Uranus -->
+        <div class="planet" data-planet="uranus">
+          <div class="planet-title">
+            <h1>Uranus</h1>
+            <p class="planet-description">The first planet discovered with a telescope, Uranus rotates on its side with an axial tilt of 98 degrees. Its blue-green color comes from methane in its atmosphere. The planet has 13 rings and 27 known moons, all named after literary characters.</p>
+          </div>
+          <div class="planet-details">
+            <div class="detail" data-detail="tilt" data-postfix="km">50724</div>
+            <div class="detail" data-detail="gravity" data-postfix="𝗑">1.8</div>
+            <div class="detail" data-detail="speed" data-postfix="km/s">6.8</div>
+          </div>
+          <figure class="planet-figure">
+            <img src="uranus.svg" alt="Uranus" />
+          </figure>
+        </div>
+
+        <!-- Neptune -->
+        <div class="planet" data-planet="neptune">
+          <div class="planet-title">
+            <h1>Neptune</h1>
+            <p class="planet-description">The windiest planet with supersonic winds reaching 2,100 km/h. Its deep blue color comes from methane, and it has a Great Dark Spot similar to Jupiter's storm. Neptune's 14 moons include Triton, which orbits in the opposite direction of the planet's rotation.</p>
+          </div>
+          <div class="planet-details">
+            <div class="detail" data-detail="tilt" data-postfix="km">49244</div>
+            <div class="detail" data-detail="gravity" data-postfix="𝗑">8.9</div>
+            <div class="detail" data-detail="speed" data-postfix="km/s">5.4</div>
+          </div>
+          <figure class="planet-figure">
+            <img src="neptune.svg" alt="Neptune" />
+          </figure>
+        </div>
+      </div>
+
+      <!-- Stars Section -->
+      <div class="section" id="stars-section">
+        <div id="stars-container">
+          <div class="background-video">
+            <video autoplay muted loop playsinline>
+              <source src="https://videos.pexels.com/video-files/3194277/3194277-hd_1920_1080_30fps.mp4" type="video/mp4">
+            </video>
+          </div>
+          
+          <div class="star-info" id="star-info">
+            <h2>Star Name</h2>
+            <p><strong>Size:</strong> <span id="star-size"></span></p>
+            <p><strong>Color:</strong> <span id="star-color"></span></p>
+            <p><strong>Discovery Year:</strong> <span id="star-year"></span></p>
+            <p><strong>Interesting Fact:</strong> <span id="star-fact"></span></p>
+          </div>
+
+          <div class="star-nav">
+            <!-- Star buttons will be added here by JavaScript -->
+          </div>
+          
+          <div class="bottom-space"></div>
+        </div>
+      </div>
+
+      <!-- Quiz Section -->
+      <div class="section" id="quiz-section">
+        <div class="container">
+          <header>
+            <h1>AstroQuest<span class="dot">.</span></h1>
+            <p class="subtitle">Explore space through exciting quizzes</p>
+          </header>
+          
+          <div class="nasa-image-container">
+            <img src="" alt="NASA Astronomy Picture of the Day" class="nasa-image">
+            <div class="image-overlay">
+              <div class="image-title">Loading image...</div>
+            </div>
+          </div>
+          
+          <div class="categories">
+            <div class="category" data-category="planets">
+              <h3>Planets</h3>
+              <p>Test your knowledge about the Solar System planets</p>
+            </div>
+            <div class="category" data-category="stars">
+              <h3>Stars</h3>
+              <p>Learn more about stars and constellations</p>
+            </div>
+            <div class="category" data-category="space">
+              <h3>Space</h3>
+              <p>Questions about space missions and discoveries</p>
+            </div>
+            <div class="category" data-category="galaxies">
+              <h3>Galaxies</h3>
+              <p>Explore distant galaxies and their mysteries</p>
+            </div>
+            <div class="category" data-category="blackholes">
+              <h3>Black Holes</h3>
+              <p>Dive into the mysteries of black holes and gravity</p>
+            </div>
+            <div class="category" data-category="astronomy">
+              <h3>Astronomy</h3>
+              <p>General questions about astronomy and space exploration</p>
+            </div>
+          </div>
+          
+          <div class="quiz-container">
+            <div class="quiz-header">
+              <h2 class="quiz-title">Quiz Category</h2>
+              <button class="back-btn">← Back to Categories</button>
+            </div>
+            <div class="question"></div>
+            <div class="options"></div>
+            <div class="explanation"></div>
+            <button class="next-btn">Next Question</button>
+          </div>
+          
+          <div class="result-container">
+            <h2>Quiz Results</h2>
+            <p class="result-score">0/0</p>
+            <p class="result-message"></p>
+            <button class="retry-btn">Try Again</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resources Section -->
+      <div class="section" id="resources-section">
+        <div class="resources-section">
+          <div class="resources-container">
+            <div class="section-title">
+              <h2>Educational Resources</h2>
+              <p>Explore our curated collection of educational materials across various subjects</p>
+            </div>
+
+            <div class="category-title">Astronomy & Space</div>
+            <div class="resources-grid">
+              <div class="resource-card">
+                <div class="resource-icon">🌌</div>
+                <h3 class="resource-title">NASA's Educational Resources</h3>
+                <p class="resource-description">Access NASA's extensive collection of educational materials, including interactive simulations, videos, and lesson plans.</p>
+                <a href="https://www.nasa.gov/education" class="resource-link" target="_blank">Explore Resources →</a>
+              </div>
+              <!-- Other resource cards... -->
+            </div>
+
+            <!-- Other resource categories... -->
+          </div>
+        </div>
+
+        <!-- Resource Modals -->
+        <div id="spaceHistoryModal" class="resource-modal">
+          <!-- Modal content... -->
+        </div>
+        <!-- Other modals... -->
+      </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <div class="bottom-nav-item active" data-section="planets-section">
+            <i class="fas fa-globe bottom-nav-icon"></i>
+            Planets
+        </div>
+        <div class="bottom-nav-item" data-section="stars-section">
+            <i class="fas fa-star bottom-nav-icon"></i>
+            Stars
+        </div>
+        <div class="bottom-nav-item" data-section="quiz-section">
+            <i class="fas fa-question-circle bottom-nav-icon"></i>
+            Quizzes
+        </div>
+        <a href="resources.html" class="bottom-nav-item" style="text-decoration: none; color: inherit;">
+            <i class="fas fa-book bottom-nav-icon"></i>
+            Resources
+        </a>
+    </div>
+  </div>
+
+  <script src="planet.js"></script>
+  <script src="star.js"></script>
+  <script src="quiz.js"></script>
+  <script src="resources.js"></script>
+</body>
+</html>

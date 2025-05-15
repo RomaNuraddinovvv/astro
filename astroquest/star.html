@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starry Sky</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="star.css">
+</head>
+<body>
+    <div id="stars-container">
+        <div class="background-video">
+            <video autoplay muted loop playsinline>
+                <source src="https://videos.pexels.com/video-files/3194277/3194277-hd_1920_1080_30fps.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+        <!-- Stars will be generated here by JavaScript -->
+        
+        <div class="star-info" id="star-info">
+            <h2>Star Name</h2>
+            <p><strong>Size:</strong> <span id="star-size"></span></p>
+            <p><strong>Color:</strong> <span id="star-color"></span></p>
+            <p><strong>Discovery Year:</strong> <span id="star-year"></span></p>
+            <p><strong>Interesting Fact:</strong> <span id="star-fact"></span></p>
+        </div>
+
+        <div class="star-nav">
+            <!-- Star buttons will be added here by JavaScript -->
+        </div>
+        
+        <div class="bottom-space"></div>
+    </div>
+
+    <script src="star.js"></script>
+</body>
+</html>

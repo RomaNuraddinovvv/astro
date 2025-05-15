@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroQuest - Where Knowledge Meets the Stars</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+    <video class="background-video" autoplay loop muted>
+        <source src="https://videos.pexels.com/video-files/1851190/1851190-uhd_2560_1440_25fps.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-section">
+        <header class="navbar">
+            <div class="categories-dropdown">
+                <img src="category.png" alt="Category icon" class="category-icon">
+                <span class="categories-text">Categories</span>
+                <div class="categories-panel">
+                    <ul>
+                        <li>Explore the Cosmos</li>
+                        <li>Fun Space Facts</li>
+                        <li>Quizzes & Challenges</li>
+                        <li>Resources & Practice Problems</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="logo">
+                <a href="landing.html" class="logo-link">
+                    <span class="logo-text">AstroQuest</span><span class="logo-dot">.</span>
+                </a>
+            </div>
+
+            <nav class="main-nav">
+            </nav>
+
+            <div class="auth-buttons">
+                <button class="btn signup-btn" id="registerBtn">Sign up</button>
+                <button class="btn login-btn" id="loginBtn">Log in</button>
+                <div class="user-icon">
+                    <img src="avatar.png" alt="User" class="user-img">
+                </div>
+            </div>
+            
+        </header>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Where<br>Knowledge<br>Meets the Stars</h1>
+                <div class="separator"></div>
+                <button class="learn-now-btn">Learn Now</button>
+                <p class="hero-description">
+                    explore stars, galaxies, and black holes through interactive
+                    lessons and quizzes. Astrophysics made fun, visual, and
+                    accessible for all curious minds.
+                </p>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <svg width="24" height="40" viewBox="0 0 24 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 1L12 39M12 39L23 28M12 39L1 28" stroke="#FF3366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+
+    </div>
+
+    <!-- Login/Register Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <div class="auth-container">
+                <h1 class="auth-title">AstroQuest<span class="dot">.</span></h1>
+        
+                <div class="tabs">
+                    <div class="tab active" id="loginTab">Log In</div>
+                    <div class="tab" id="registerTab">Register</div>
+                    
+                </div>
+        
+                <form id="loginForm" class="auth-form">
+                    <!-- Login Form Fields -->
+                    <div class="form-group login-field">
+                        <label for="loginEmail">Email Address</label>
+                        <input type="email" id="loginEmail" placeholder="Enter your email" required />
+                    </div>
+        
+                    <div class="form-group login-field">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" placeholder="Enter your password" required />
+                    </div>
+                    
+                    <!-- Register Form Fields -->
+                    <div class="form-group register-field" style="display: none;">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" placeholder="Enter your full name" required />
+                    </div>
+                    
+                    <div class="form-group register-field" style="display: none;">
+                        <label for="registerEmail">Email Address</label>
+                        <input type="email" id="registerEmail" placeholder="Enter your email" required />
+                    </div>
+        
+                    <div class="form-group register-field" style="display: none;">
+                        <label for="registerPassword">Password</label>
+                        <input type="password" id="registerPassword" placeholder="Enter your password" required />
+                    </div>
+                    
+                    <div class="form-group register-field" style="display: none;">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" placeholder="Confirm your password" required />
+                    </div>
+        
+                    <button type="submit" class="auth-button">Log In</button>
+        
+                    <p class="switch-prompt">Don't have an account?</p>
+                    <a href="#" class="switch-link" id="createAccountLink">Create an account</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- NASA Images Gallery Section -->
+    <section class="nasa-gallery">
+        <div class="section-title">
+            <h2>Explore the Universe</h2>
+            <p>Discover breathtaking NASA imagery across our cosmic neighborhood</p>
+        </div>
+        
+        <div class="gallery-categories">
+            <div class="category-selector">
+                <button class="category-btn active" data-category="planets">Planets</button>
+                <button class="category-btn" data-category="stars">Stars</button>
+                <button class="category-btn" data-category="galaxies">Galaxies</button>
+                <button class="category-btn" data-category="nebulae">Nebulae</button>
+                <button class="category-btn" data-category="phenomena">Cosmic Phenomena</button>
+            </div>
+            
+            <div class="gallery-view">
+                <!-- Gallery content will be loaded here -->
+                <div class="gallery-container planets active">
+                    <div class="gallery-navigation">
+                        <button class="nav-arrow prev">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="featured-image">
+                            <img src="" alt="Featured planet" class="main-image">
+                            <div class="image-info">
+                                <h3 class="image-title">Earth</h3>
+                                <p class="image-description">Our home planet as seen from space.</p>
+                            </div>
+                        </div>
+                        <button class="nav-arrow next">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 6L15 12L9 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="thumbnails-container">
+                        <!-- Thumbnails will be loaded here -->
+                    </div>
+                </div>
+                
+                <!-- Stars Gallery -->
+                <div class="gallery-container stars">
+                    <div class="gallery-navigation">
+                        <button class="nav-arrow prev">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="featured-image">
+                            <img src="" alt="Featured star" class="main-image">
+                            <div class="image-info">
+                                <h3 class="image-title">Star</h3>
+                                <p class="image-description">Description of the star.</p>
+                            </div>
+                        </div>
+                        <button class="nav-arrow next">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 6L15 12L9 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="thumbnails-container">
+                        <!-- Thumbnails will be loaded here -->
+                    </div>
+                </div>
+                
+                <!-- Galaxies Gallery -->
+                <div class="gallery-container galaxies">
+                    <div class="gallery-navigation">
+                        <button class="nav-arrow prev">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="featured-image">
+                            <img src="" alt="Featured galaxy" class="main-image">
+                            <div class="image-info">
+                                <h3 class="image-title">Galaxy</h3>
+                                <p class="image-description">Description of the galaxy.</p>
+                            </div>
+                        </div>
+                        <button class="nav-arrow next">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 6L15 12L9 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="thumbnails-container">
+                        <!-- Thumbnails will be loaded here -->
+                    </div>
+                </div>
+                
+                <!-- Nebulae Gallery -->
+                <div class="gallery-container nebulae">
+                    <div class="gallery-navigation">
+                        <button class="nav-arrow prev">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="featured-image">
+                            <img src="" alt="Featured nebula" class="main-image">
+                            <div class="image-info">
+                                <h3 class="image-title">Nebula</h3>
+                                <p class="image-description">Description of the nebula.</p>
+                            </div>
+                        </div>
+                        <button class="nav-arrow next">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 6L15 12L9 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="thumbnails-container">
+                        <!-- Thumbnails will be loaded here -->
+                    </div>
+                </div>
+                
+                <!-- Phenomena Gallery -->
+                <div class="gallery-container phenomena">
+                    <div class="gallery-navigation">
+                        <button class="nav-arrow prev">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="featured-image">
+                            <img src="" alt="Featured cosmic phenomenon" class="main-image">
+                            <div class="image-info">
+                                <h3 class="image-title">Cosmic Phenomenon</h3>
+                                <p class="image-description">Description of the cosmic phenomenon.</p>
+                            </div>
+                        </div>
+                        <button class="nav-arrow next">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 6L15 12L9 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="thumbnails-container">
+                        <!-- Thumbnails will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="section-title">
+            <h2>Frequently Asked Questions</h2>
+            <p>Get answers to common questions about AstroQuest</p>
+        </div>
+        
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What is AstroQuest?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>AstroQuest is an educational platform dedicated to teaching astronomy and astrophysics through interactive lessons, quizzes, and stunning visuals. We make complex cosmic concepts accessible to learners of all ages.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Is AstroQuest suitable for beginners?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely! AstroQuest is designed for space enthusiasts of all knowledge levels. We offer content ranging from beginner-friendly introductions to more advanced topics for those looking to deepen their understanding.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Do I need to sign up to access the content?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>While some basic content is available to all visitors, creating a free account gives you access to our full library of lessons, interactive quizzes, progress tracking, and personalized learning paths.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Where do the images come from?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Our gallery features images from NASA's extensive collection, accessed through their public API. All images are credited appropriately and used for educational purposes.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Can I suggest topics or features?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! We love hearing from our community. Please use the contact information in the footer to send us your suggestions, feedback, or questions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-text">AstroQuest</span><span class="logo-dot">.</span>
+                <p>Exploring the cosmos, one lesson at a time.</p>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="mission-page.html">Our Mission</a></li>
+                        <li><a href="team_page.html">The Team</a></li>
+                        <li><a href="https://github.com/dashboard">GitHub</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="help_center_page.html">Help Center</a></li>
+                        <li><a href="contact_us_page.html">Contact Us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="contact-info">
+                <h4>Contact Us</h4>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <img src="Phone.png" alt="Phone" class="contact-icon">
+                        <div>
+                            <div>+77079550105</div>
+                            <div>+77027839080</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <img src="mail.png" alt="Email" class="contact-icon">
+                        <div>
+                            <div>220317035@stu.sdu.edu.kz</div>
+                            <div>220317039@stu.sdu.edu.kz</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 AstroQuest. All rights reserved.</p>
+        </div>
+    </footer>
+    
+
+<script src="landing.js"></script>
+</body>
+</html>

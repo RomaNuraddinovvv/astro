@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        body {
+            background-color: #f7f9fc;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #0a0a0a;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-form {
+            flex: 2;
+            min-width: 300px;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1, h2 {
+            margin-bottom: 20px;
+        }
+        
+        .info-item {
+            margin-bottom: 20px;
+        }
+        
+        .info-item h3 {
+            margin-bottom: 10px;
+            color: #ff3366;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .social-links a {
+            color: #ff3366;
+            text-decoration: none;
+        }
+        
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+        
+        form div {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        button {
+            background-color: #ff3366;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #e62e5c;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0a0a0a;
+            color: white;
+            margin-top: 40px;
+        }
+        
+        .alert {
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            display: none;
+        }
+        
+        .alert-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .alert-error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you. Reach out to us using any of the methods below.</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="content">
+            <div class="contact-info">
+                <div class="info-item">
+                    <h3>Customer Support</h3>
+                    <p>Our support team is available Monday through Friday, 9am - 5pm.</p>
+                </div>
+                
+                <div class="info-item">
+                    <h3>Email</h3>
+                    <p>220317039@stu.sdu.edu.kz</p>
+                    <p>220317035@stu.sdu.edu.kz</p>
+                </div>
+                
+                <div class="info-item">
+                    <h3>Phone</h3>
+                    <p>8(702)-783-90-80</p>
+                    <p>7(707)-955-01-05</p>
+                </div>
+                
+                <div class="info-item">
+                    <h3>Address</h3>
+                    <p>Abylai khan 1/1</p>
+                    <p>Qaskelen</p>
+                </div>
+                
+                <div class="info-item">
+                    <h3>Social Media</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/mukhiddinuli_rn?igsh=MWY3ZDFlajZvZHV0dw==" target="_blank">Instagram</a>
+                        <a href="https://t.me/mukhiddinuli_rn" target="_blank">Telegram</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h2>Send Us a Message</h2>
+                <div class="alert alert-success" id="success-message">Your message has been sent successfully!</div>
+                <div class="alert alert-error" id="error-message">There was an error sending your message. Please try again.</div>
+                
+                <form id="contactForm">
+                    <div>
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div>
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div>
+                        <label for="phone">Phone Number (Optional)</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div>
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject">
+                            <option value="general">General Inquiry</option>
+                            <option value="support">Technical Support</option>
+                            <option value="billing">Billing Question</option>
+                            <option value="feedback">Feedback</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    
+                    <button type="submit" id="submitBtn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AstroQuest. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.disabled = true;
+            submitBtn.innerText = 'Sending...';
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Using EmailJS service for email sending
+            // You'll need to sign up at emailjs.com and get your own service ID, template ID, and user ID
+            const serviceID = 'service_v6dr18l'; // Replace with your EmailJS service ID
+            const templateID = 'template_o6zdrce'; // Replace with your EmailJS template ID
+            const userID = 'A90pgkI1wwz2lo1tL'; // Replace with your EmailJS user ID
+            
+            // Load EmailJS SDK
+            const script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
+            document.body.appendChild(script);
+            
+            script.onload = function() {
+                emailjs.init(userID);
+                
+                emailjs.send(serviceID, templateID, formData)
+                    .then(function(response) {
+                        console.log('SUCCESS!', response.status, response.text);
+                        document.getElementById('success-message').style.display = 'block';
+                        document.getElementById('error-message').style.display = 'none';
+                        document.getElementById('contactForm').reset();
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                        document.getElementById('error-message').style.display = 'block';
+                        document.getElementById('success-message').style.display = 'none';
+                    })
+                    .finally(function() {
+                        submitBtn.disabled = false;
+                        submitBtn.innerText = 'Send Message';
+                        
+                        // Hide success message after 5 seconds
+                        setTimeout(function() {
+                            document.getElementById('success-message').style.display = 'none';
+                        }, 5000);
+                    });
+            };
+        });
+    </script>
+</body>
+</html>

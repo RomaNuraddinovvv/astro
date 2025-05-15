@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Mission - AstroQuest</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: white;
+            line-height: 1.6;
+            background-attachment: fixed;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        header {
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-icon {
+            margin-right: 10px;
+            font-size: 32px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #7f8ff4;
+        }
+        
+        .mission-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        .title {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            position: relative;
+        }
+        
+        .title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #7f8ff4, #ff53bb);
+            margin: 10px auto;
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: #a8b2d1;
+        }
+        
+        .mission-description {
+            max-width: 800px;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+        
+        .mission-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .mission-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .mission-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+        
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #7f8ff4;
+        }
+        
+        .card-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+        
+        .card-text {
+            color: #c8d0f7;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(90deg, #7f8ff4, #ff53bb);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(127, 143, 244, 0.5);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(127, 143, 244, 0.7);
+        }
+        
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle 5s infinite;
+        }
+        
+        @keyframes twinkle {
+            0% { opacity: 0.1; }
+            50% { opacity: 1; }
+            100% { opacity: 0.1; }
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            color: #a8b2d1;
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+        
+        .section-divider {
+            width: 80%;
+            max-width: 800px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            margin: 30px auto;
+        }
+        
+        .target-audience {
+            max-width: 800px;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        blockquote {
+            border-left: 4px solid #7f8ff4;
+            padding-left: 20px;
+            margin: 30px 0;
+            max-width: 800px;
+            font-style: italic;
+            color: #a8b2d1;
+        }
+        
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .mission-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .mission-card {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    
+    <div class="container">
+        <header>
+            <a href="#" class="logo">
+                <span class="logo-icon">🚀</span> AstroQuest
+            </a>
+            
+        </header>
+        
+        <main class="mission-content">
+            <h1 class="title">AstroQuest</h1>
+            <h2 class="subtitle">An educational platform on astronomy for schoolchildren</h2>
+            
+            <p class="mission-description">
+                AstroQuest is an interactive educational website designed for schoolchildren with the aim of in-depth and fascinating study of the basics of astronomy. The platform offers structured material, visual elements and game elements to increase interest in space science.
+            </p>
+            
+            <div class="section-divider"></div>
+            
+            <h3 class="subtitle">📌 Main sections of the platform:</h3>
+            
+            <div class="mission-cards">
+                <div class="mission-card">
+                    <div class="card-icon">🪐</div>
+                    <h3 class="card-title">Planets</h3>
+                    <p class="card-text">
+                        This section contains detailed information about the planets of the Solar system. Each object is accompanied by an image, a description of the main characteristics, interesting facts and scientific data presented in an accessible form.
+                    </p>
+                </div>
+                
+                <div class="mission-card">
+                    <div class="card-icon">⭐</div>
+                    <h3 class="card-title">Stars</h3>
+                    <p class="card-text">
+                        In this section, users will be able to get acquainted with the types of stars, their structure, life cycles and unique features. The materials are accompanied by cognitive facts that help broaden the horizons of students.
+                    </p>
+                </div>
+                
+                <div class="mission-card">
+                    <div class="card-icon">❓</div>
+                    <h3 class="card-title">Astronomy Quizzes</h3>
+                    <p class="card-text">
+                        Interactive tests and quizzes aimed at verifying and consolidating knowledge on the topics presented on the website. Quizzes promote the development of interest and motivation for learning through elements of gamification.
+                    </p>
+                </div>
+                
+                <div class="mission-card">
+                    <div class="card-icon">📚</div>
+                    <h3 class="card-title">Resources</h3>
+                    <p class="card-text">
+                        A selection of external and internal educational resources, including videos, articles, links to scientific agencies (for example, NASA, ESA) and textbooks. This section complements the main themes of the site.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="section-divider"></div>
+            
+            <h3 class="subtitle">👥 Target audience:</h3>
+            <p class="target-audience">
+                Middle and high school students, teachers, and anyone who is interested in astronomy and aspires to gain basic knowledge in this field in a convenient and modern form.
+            </p>
+            
+            <div class="section-divider"></div>
+            
+            <blockquote>
+                AstroQuest helps students explore space in an accessible, interesting and scientifically accurate way.
+            </blockquote>
+            
+            <a href="https://t.me/atstroquestteam" class="cta-button" target="_blank">Join Our Mission</a>
+        </main>
+        
+        <footer>
+            <p>© 2025 AstroQuest. All rights reserved.</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Create twinkling stars background
+        function createStars() {
+            const stars = document.getElementById('stars');
+            const starCount = 200;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                
+                // Random position
+                const x = Math.random() * 100;
+                const y = Math.random() * 100;
+                
+                // Random size
+                const size = Math.random() * 3;
+                
+                // Random animation delay
+                const delay = Math.random() * 5;
+                
+                star.style.left = `${x}%`;
+                star.style.top = `${y}%`;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                star.style.animationDelay = `${delay}s`;
+                
+                stars.appendChild(star);
+            }
+        }
+        
+        // Run when page loads
+        window.onload = function() {
+            createStars();
+        };
+    </script>
+</body>
+</html>

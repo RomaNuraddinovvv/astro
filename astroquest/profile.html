@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - AstroQuest</title>
+    <link rel="stylesheet" href="profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="video-container">
+        <video id="video-bg" autoplay muted loop playsinline>
+            <source src="https://videos.pexels.com/video-files/5155396/5155396-hd_1920_1080_30fps.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <h1>Profile</h1>
+            <div class="avatar-section">
+                <div class="avatar-container">
+                    <img id="avatar-img" src="avatar.png" alt="Profile Avatar">
+                </div>
+                <input type="file" id="avatar-upload" class="avatar-upload" accept="image/*">
+                <button class="avatar-upload-btn" onclick="document.getElementById('avatar-upload').click()">Change Avatar</button>
+            </div>
+        </div>
+
+        <div class="profile-info">
+            <div class="profile-section">
+                <h2>Personal Information</h2>
+                <div class="input-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" placeholder="Enter your full name">
+                    <button class="save-btn">Save</button>
+                </div>
+
+                <div class="input-group">
+                    <label for="birthday">Birthday</label>
+                    <input type="date" id="birthday">
+                    <button class="save-btn">Save</button>
+                </div>
+
+                <div class="input-group">
+                    <label for="gender">Gender</label>
+                    <div class="gender-selection">
+                        <label class="gender-option">
+                            <input type="radio" name="gender" value="male">
+                            <span>Male</span>
+                        </label>
+                        <label class="gender-option">
+                            <input type="radio" name="gender" value="female">
+                            <span>Female</span>
+                        </label>
+                        <label class="gender-option">
+                            <input type="radio" name="gender" value="other">
+                            <span>Other</span>
+                        </label>
+                    </div>
+                    <button class="save-btn">Save</button>
+                </div>
+            </div>
+
+            <div class="profile-section">
+                <h2>Daily Inspiration</h2>
+                <div class="quote-section">
+                    <p id="quote-text">"The cosmos is within us. We are made of star-stuff. We are a way for the universe to know itself." - Carl Sagan</p>
+                    <button type="button" class="new-quote-btn" onclick="updateQuote()">New Quote</button>
+                </div>
+            </div>
+
+            <div class="profile-section">
+                <h2>Quiz Statistics</h2>
+                <div class="stats-section">
+                    <div class="stat-card">
+                        <h3>Space Basics</h3>
+                        <p>85%</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Solar System</h3>
+                        <p>92%</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Stars & Galaxies</h3>
+                        <p>78%</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-actions">
+                <a href="landing.html" class="logout-btn">Logout</a>
+            </div>
+        </div>
+    </div>
+    <script src="profile.js"></script>
+</body>
+</html>

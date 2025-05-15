@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroQuest - Educational Resources</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="landing.css">
+    <link rel="stylesheet" href="resources.css">
+</head>
+<body>
+    <div class="resources-section">
+        <div class="resources-container">
+            <div class="section-title">
+                <h2>Educational Resources</h2>
+                <p>Explore our curated collection of educational materials across various subjects</p>
+            </div>
+
+            <div class="category-title">Astronomy & Space</div>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">🌌</div>
+                    <h3 class="resource-title">NASA's Educational Resources</h3>
+                    <p class="resource-description">Access NASA's extensive collection of educational materials, including interactive simulations, videos, and lesson plans.</p>
+                    <a href="https://www.nasa.gov/education" class="resource-link" target="_blank">Explore Resources →</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">🔭</div>
+                    <h3 class="resource-title">Interactive Star Maps</h3>
+                    <p class="resource-description">Learn about constellations and celestial objects with interactive star maps and guides.</p>
+                    <a href="https://stellarium.org" class="resource-link" target="_blank">View Star Maps →</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">🚀</div>
+                    <h3 class="resource-title">Space Exploration History</h3>
+                    <p class="resource-description">Discover the fascinating history of space exploration through detailed timelines and stories.</p>
+                    <a href="#" class="resource-link" data-modal="spaceHistoryModal">Learn More →</a>
+                </div>
+            </div>
+
+            <div class="category-title">Books & Literature</div>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">📚</div>
+                    <h3 class="resource-title">Space Science Fiction</h3>
+                    <p class="resource-description">Explore classic and modern science fiction books that inspire imagination and scientific thinking.</p>
+                    <a href="#" class="resource-link" data-modal="scienceFictionModal">Browse Books →</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">📖</div>
+                    <h3 class="resource-title">Astronomy Books</h3>
+                    <p class="resource-description">A curated list of educational books covering various scientific topics and discoveries.</p>
+                    <a href="#" class="resource-link" data-modal="educationalBooksModal">View Collection →</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">📝</div>
+                    <h3 class="resource-title">Study Guides</h3>
+                    <p class="resource-description">Comprehensive study guides and summaries for popular science and astronomy books.</p>
+                    <a href="#" class="resource-link" data-modal="studyGuidesModal">Access Guides →</a>
+                </div>
+            </div>
+
+            <div class="category-title">YouTube Channels</div>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h3 class="resource-title">Astronomy Playlist</h3>
+                    <p class="resource-description">A comprehensive collection of astronomy videos covering various topics from basic concepts to advanced theories.</p>
+                    <a href="https://www.youtube.com/watch?v=i8U9ZjRXClI&list=PLybg94GvOJ9E9BcCODbTNw2xU4b1cWSi6" class="resource-link" target="_blank">Watch Playlist →</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">📺</div>
+                    <h3 class="resource-title">Space Science Videos</h3>
+                    <p class="resource-description">Engaging videos about space exploration, celestial phenomena, and astronomical discoveries.</p>
+                    <a href="https://youtu.be/egDIqKLt2L4?si=Um-dCmf37JREE3M9" class="resource-link" target="_blank">Watch Videos →</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">🔭</div>
+                    <h3 class="resource-title">Educational Channels</h3>
+                    <p class="resource-description">Top astronomy and space science YouTube channels for learning and exploration.</p>
+                    <a href="#" class="resource-link" data-modal="youtubeChannelsModal">View Channels →</a>
+                </div>
+            </div>
+
+            <div class="category-title">Earth & Space Science</div>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">🌍</div>
+                    <h3 class="resource-title">Interactive Maps</h3>
+                    <p class="resource-description">Explore interactive maps and geographical data from around the world.</p>
+                    <a href="https://earth.google.com" class="resource-link" target="_blank">Explore Maps →</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">🌋</div>
+                    <h3 class="resource-title">Earth & Space Science</h3>
+                    <p class="resource-description">Learn about geology, meteorology, and other earth sciences through interactive content.</p>
+                    <a href="#" class="resource-link" data-modal="earthScienceModal">Discover More →</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">🌡️</div>
+                    <h3 class="resource-title">Space Climate Studies</h3>
+                    <p class="resource-description">Resources for understanding climate change and environmental science.</p>
+                    <a href="#" class="resource-link" data-modal="climateStudiesModal">Learn About Climate →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="spaceHistoryModal" class="resource-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Space Exploration History</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <ul class="modal-list">
+                    <li><a href="https://www.nasa.gov/history" target="_blank">The Space Race: 1957-1975</a></li>
+                    <li><a href="https://www.nasa.gov/mission/apollo-11" target="_blank">Apollo Missions: Journey to the Moon</a></li>
+                    <li><a href="https://www.nasa.gov/space-shuttle" target="_blank">Space Shuttle Era: 1981-2011</a></li>
+                    <li><a href="https://www.nasa.gov/mission/space-station" target="_blank">International Space Station</a></li>
+                    <li><a href="https://www.nasa.gov/mission/artemis" target="_blank">Modern Space Exploration</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="scienceFictionModal" class="resource-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Space Science Fiction</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <ul class="modal-list">
+                    <li><a href="https://www.goodreads.com/book/show/18007564-the-martian" target="_blank">The Martian - Andy Weir</a></li>
+                    <li><a href="https://www.goodreads.com/book/show/54493401-project-hail-mary" target="_blank">Project Hail Mary - Andy Weir</a></li>
+                    <li><a href="https://www.goodreads.com/book/show/70535.2001" target="_blank">2001: A Space Odyssey - Arthur C. Clarke</a></li>
+                    <li><a href="https://www.goodreads.com/book/show/61663.Contact" target="_blank">Contact - Carl Sagan</a></li>
+                    <li><a href="https://www.goodreads.com/book/show/20518872-the-three-body-problem" target="_blank">The Three-Body Problem - Liu Cixin</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="educationalBooksModal" class="resource-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Astronomy Books</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <ul class="modal-list">
+                    <li><a href="https://www.goodreads.com/book/show/32191710-astrophysics-for-people-in-a-hurry" target="_blank">Astrophysics for People in a Hurry - Neil deGrasse Tyson</a></li>
+                    <li><a href="https://www.goodreads.com/book/show/55030.Cosmos" target="_blank">Cosmos - Carl Sagan</a></li>
+                    <li><a href="https://www.goodreads.com/book/show/3869.A_Brief_History_of_Time" target="_blank">A Brief History of Time - Stephen Hawking</a></li>
+                    <li><a href="https://www.goodreads.com/book/show/25201983-the-universe-in-your-hand" target="_blank">The Universe in Your Hand - Christophe Galfard</a></li>
+                    <li><a href="https://www.goodreads.com/book/show/17846.Death_by_Black_Hole" target="_blank">Death by Black Hole - Neil deGrasse Tyson</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="studyGuidesModal" class="resource-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Astronomy Study Guides</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <ul class="modal-list">
+                    <li><a href="https://www.nasa.gov/learning-resources" target="_blank">NASA Learning Resources</a></li>
+                    <li><a href="https://www.esa.int/Education" target="_blank">ESA Education</a></li>
+                    <li><a href="https://www.astronomy.com/learn" target="_blank">Astronomy Magazine Learning Center</a></li>
+                    <li><a href="https://www.space.com/education" target="_blank">Space.com Education</a></li>
+                    <li><a href="https://www.skyandtelescope.org/astronomy-resources" target="_blank">Sky & Telescope Resources</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="earthScienceModal" class="resource-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Earth & Space Science</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <ul class="modal-list">
+                    <li><a href="https://www.nasa.gov/earth" target="_blank">Earth's Place in the Solar System</a></li>
+                    <li><a href="https://www.nasa.gov/space-weather" target="_blank">Space Weather and Its Effects</a></li>
+                    <li><a href="https://www.nasa.gov/planetary-science" target="_blank">Planetary Atmospheres</a></li>
+                    <li><a href="https://www.nasa.gov/space-debris" target="_blank">Space Debris and Orbital Mechanics</a></li>
+                    <li><a href="https://www.nasa.gov/earth-science" target="_blank">Earth-Space Interactions</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="climateStudiesModal" class="resource-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Space Climate Studies</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <ul class="modal-list">
+                    <li><a href="https://www.nasa.gov/solar-activity" target="_blank">Solar Activity and Climate</a></li>
+                    <li><a href="https://www.nasa.gov/space-weather" target="_blank">Space Weather Monitoring</a></li>
+                    <li><a href="https://www.nasa.gov/solar-flares" target="_blank">Solar Flares and Their Impact</a></li>
+                    <li><a href="https://www.nasa.gov/cosmic-rays" target="_blank">Cosmic Ray Effects</a></li>
+                    <li><a href="https://www.nasa.gov/climate" target="_blank">Space Climate Research</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add new modal for YouTube channels -->
+    <div id="youtubeChannelsModal" class="resource-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Top Astronomy YouTube Channels</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <ul class="modal-list">
+                    <li><a href="https://www.youtube.com/@Kurzgesagt" target="_blank">Kurzgesagt - In a Nutshell</a></li>
+                    <li><a href="https://www.youtube.com/@PBSspace" target="_blank">PBS Space Time</a></li>
+                    <li><a href="https://www.youtube.com/@veritasium" target="_blank">Veritasium</a></li>
+                    <li><a href="https://www.youtube.com/@AntonPetrov" target="_blank">Anton Petrov</a></li>
+                    <li><a href="https://www.youtube.com/@DrBecky" target="_blank">Dr. Becky</a></li>
+                    <li><a href="https://www.youtube.com/@NASA" target="_blank">NASA</a></li>
+                    <li><a href="https://www.youtube.com/@EuropeanSpaceAgency" target="_blank">European Space Agency</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="resources.js"></script>
+</body>
+</html>
